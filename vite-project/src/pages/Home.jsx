@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PaintingCard from "../components/PaintingCard";
-
+import "../css/Home.css";
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const paintings = [
@@ -17,7 +17,7 @@ function Home() {
     <div className="home">
       <h1>Welcome to the Art Gallery</h1>
       <div className="paintings-list">
-        <form onSubmit={handleSearch} className="search-input">
+        <form onSubmit={handleSearch} className="search-form">
           <input
             type="text"
             placeholder="Search for a painting..."
@@ -33,12 +33,6 @@ function Home() {
             painting.title.toLowerCase().includes(searchTerm.toLowerCase()) && (
                 <PaintingCard key={painting.id} painting={painting} />
             )
-        //   <PaintingCard key={painting.id} painting={painting} />
-          // <div key={painting.id} className="painting-card">
-          //     <img src={`https://example.com/${painting.title}.jpg`} alt={painting.title} />
-          //     <h2>{painting.title}</h2>
-          //     <p>{painting.date}</p>
-          // </div>
         ))}
       </div>
     </div>

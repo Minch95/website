@@ -1,3 +1,4 @@
+import "../css/PaintingCard.css";
 function PaintingCard({ painting }) {
   function onFavoriteClick() {
     alert("clicked");
@@ -11,7 +12,7 @@ function PaintingCard({ painting }) {
           </button>
         </div>
       </div>
-      <div className="movie-info">
+      <div className="painting-info">
         <h3>{painting.title}</h3>
         <p>{painting.release_date}</p>
       </div>
